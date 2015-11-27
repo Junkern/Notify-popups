@@ -1,0 +1,38 @@
+#notification {
+	background-color:white;
+	border:1px solid gray;
+	position:absolute;
+	padding:5px 25px;
+	top:40%;
+	left:30%;
+}
+#notification a {
+	display:inline-block;
+    margin: 10px;
+    padding: 5px 15px;
+    border: 1px solid grey;
+    transition: background-color 1s;
+    transition-timing-function
+}
+
+#notification a:hover {
+	cursor: pointer;	
+}
+
+#notification a.yes:hover {
+	background-color: #dcf2dc;
+}
+#notification a.no:hover {
+	background-color: #f2dcdc;	
+}
+.error {
+	background-color:red;
+}
+
+.warning {
+	background-color:yellow;
+}
+
+.background-blur {
+	opacity: 0.5;
+}
