@@ -13,7 +13,11 @@ var Notification = (function(window) {
 	};
 
 	my.addButton = function(text, options) {
-		addCallback(options.callback);
+		if (typeof options !== "undefined") {
+			addCallback(options.callback);	
+		} else {
+			addCallback();
+		}	
 		buttons += buildButton(text, options);
 		counter++;
 		return this;
