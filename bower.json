@@ -1,0 +1,18 @@
+{
+  "name": "Notify-Popups",
+  "main": "Notification.js",
+  "homepage": "https://github.com/Junkern/Notification",
+  "authors": [
+    "Martin <junker@monoceres.uberspace.de>"
+  ],
+  "description": "A lightweighavaScript framework for displaying notification popups to users",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,8 +1,5 @@
-# Notification
+# Notify-popups
 
-## Install
-
-At the moment the only way to install Notifications is to checkout the repository or copy the code. More to come!
 
 ## Introduction
 
@@ -20,6 +17,14 @@ Usage example:
 var text = "Some important information!";
 Notification.addButton('Close').eclipse('container').show(text);
 ```
+
+## Install
+
+You can install notify-popups via bower:
+```
+bower install notify-popups
+```
+
 
 ## API
 
