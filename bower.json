@@ -5,7 +5,7 @@
   "authors": [
     "Martin <junker@monoceres.uberspace.de>"
   ],
-  "description": "A lightweighavaScript framework for displaying notification popups to users",
+  "description": "A lightweight JavaScript framework for displaying notification popups to users",
   "moduleType": [],
   "license": "MIT",
   "ignore": [
