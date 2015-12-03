@@ -1,0 +1,22 @@
+{
+  "name": "notify-popups",
+  "version": "1.0.0",
+  "description": "A lightweight JavaScript framework for displaying notification popups to users",
+  "main": "notification.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Junkern/Notification.git"
+  },
+  "author": "Martin <junker@monoceres.uberspace.de>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Junkern/Notification/issues"
+  },
+  "homepage": "https://github.com/Junkern/Notification#readme"
+}
