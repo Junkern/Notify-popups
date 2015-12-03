@@ -39,8 +39,8 @@ var Notification = (function(window) {
 	var addCallback = function(callback) {
 		var cb =  function() {
 			var el = getEl('notification');
-			el.parentElement.removeChild(el);
 			if(typeof callback !== 'undefined') callback();
+			el.parentElement.removeChild(el);
 		};
 		callbacks[counter] = cb;
 	};
