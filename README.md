@@ -20,9 +20,10 @@ Notification.addButton('Close').eclipse('container').show(text);
 
 ## Install
 
-You can install notify-popups via bower:
+You can install notify-popups via bower or npm:
 ```
 bower install notify-popups
+npm install notify-popups
 ```
 
 
