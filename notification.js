@@ -7,6 +7,14 @@ var Notification = (function(window) {
 	var callbacks = {};
 	var counter = 0;
 	var eclipsed = [];
+	var displayed = false;
+
+	d.onkeydown = function(event) {
+		event = event || window.event;
+		if (event.keyCode == 27 && displayed) {
+			reset();
+		}
+	};
 
 	var getEl = function(id) {
 		return document.getElementById(id);
@@ -14,10 +22,10 @@ var Notification = (function(window) {
 
 	my.addButton = function(text, options) {
 		if (typeof options !== "undefined") {
-			addCallback(options.callback);	
+			addCallback(options.callback);
 		} else {
 			addCallback();
-		}	
+		}
 		buttons += buildButton(text, options);
 		counter++;
 		return this;
@@ -38,20 +46,21 @@ var Notification = (function(window) {
 
 	var addCallback = function(callback) {
 		var cb =  function() {
-			var el = getEl('notification');
 			if(typeof callback !== 'undefined') callback();
-			el.parentElement.removeChild(el);
+			reset();
 		};
 		callbacks[counter] = cb;
 	};
 
 	var reset =  function() {
+		getEl('notification').parentElement.removeChild(getEl('notification'));
 		for (var i = 0; i < eclipsed.length; i++) {
 			eclipsed[i].style.opacity = 1;
 		}
 		buttons = '</br>';
 		content = '';
 		callbacks = {};
+		displayed = false;
 	};
 
 	my.eclipse = function() {
@@ -65,10 +74,10 @@ var Notification = (function(window) {
 
 	my.cb = function(number) {
 		callbacks[number]();
-		reset();
 	};
 
 	my.show = function(content) {
+		displayed = true;
 		var div = d.createElement('div');
 		div.id = 'notification';
 		div.innerHTML = content;
